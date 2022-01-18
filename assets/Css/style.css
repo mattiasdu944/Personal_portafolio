@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+*{
+    transition: all 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*===== FONT SIZE - WEIGHT*/
+    --h1-size: 4rem;
+    --h2-size: 3.5rem;
+    --h3-size: 3rem;
+    --h4-size: 2.5rem;
+    --icon-size: 2.5rem;
+    --text-size:1.25rem;
+    --special-size: 2rem;
+
+    --bold-weight: 700;
+    --semi-bold-weight: 600;
+    --regular-weight: 500;
+
+    /*===== COLORES*/
+    --bg-color:#0d1117;
+    --color-primary: #161b22;
+    --color-text: #cec6c6;
+    --color-text-active: #fcfcfc;
+    --secondary-text_color: #13bbc4;
+    --boton-color:#13bbc4;
+    --color-canvas-default: #0d1117;
+    --color-canvas-overlay: #161b22;
+    --color-canvas-inset: #010409;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-canvas-default-transparent: rgba(13,17,23,0);
+    --color-accent-subtle: rgba(56,139,253,0.15);
+    --color-success-subtle: rgba(46, 95, 160, 0.15);
+    
+
+}
+
+/*==================== CUSTOM ====================*/
+h1, h2, h3, h4{
+    font-weight: var(--bold-weight) ;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: var(--h1-size);
+}
+
+h2{
+    font-size: var(--h2-size);
+}
+
+h3{
+    font-size: var(--h3-size);
+}
+
+h4{
+    font-size: var(--h4-size);
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
+
+span{
+    color: var(--color-text);
+}
+
+p{
+    font-size: var(--text-size);
+    color: var(--color-text);
+}
+
+#nav_icon{
+    color: var(--color-text-active);
+    font-size: var(--icon-size)
+}
+
+a{
+    font-size: var(--text-size);
+    font-weight: var(--regular-weight);
+    text-decoration: none;
+}
+
+.link{
+    font-size: var(--text-size);
+    color:var(--secondary-text_color);
+}
+.link:hover{
+    color:var(--secondary-text_color);
+}
+
+.color{
+    color: var(--secondary-text_color);
+}
+
+.secondary_text{
+    color: var(--secondary-text_color);
+}
+
+.seccion-padding{
+    padding: 7rem;
+}
+
+.boton{
+    margin: 20px 0px;
+    width: 50%;
+    padding: 10px;
+    color: var(--secondary-text_color);
+    border-radius: 5px;
+    border: 2px solid var(--secondary-text_color);
+}
+
+.boton:hover{
+    background-color: var(--boton-color);
+    color: var(--color-primary);
+}
+.container_boton{
+    width: 100%;
+    display: block;
+
+}
+body{
+    color: var(--color-text);
+    background: var(--bg-color);
+}	
+/*==================== MEDIA ====================*/
+
+/*==================== NAVBAR ====================*/
+
+.navbar_scroll{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    background-color: var(--color-primary);
+}
+.navbar-brand{
+    font-size: var(--special-size);
+}
+.nav-item{
+    margin:0px 20px;
+}
+.nav-item a, .navbar-brand{
+    color: var(--color-text);
+}
+
+.nav-item a:hover, .navbar-brand:hover{
+    color: var(--secondary-text_color);
+}
+
+
+/*==================== MAIN ====================*/
+.card_gradiant{
+    border-radius: 10px;
+    background-image: 
+        linear-gradient(180deg, 
+            var(--color-canvas-default-transparent), 
+            var(--color-canvas-default)),
+        linear-gradient(70deg, var(--color-accent-subtle) 32%,
+             var(--color-success-subtle));
+    border: 1px solid var(--color-border-default);
+}
+
+/*==================== SERVCIOS ====================*/
+.card_services{
+    border-radius: 10px;
+    background-color: var(--color-canvas-default);
+    border: 1px solid var(--color-border-default);
+    padding: 2rem;
+    
+}
+
+.card_services:hover{
+    transition: all 0.5s ease;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    background-image: 
+    linear-gradient(180deg, 
+        var(--color-canvas-default-transparent), 
+        var(--color-canvas-default)),
+    linear-gradient(70deg, var(--color-accent-subtle) 32%,
+         var(--color-success-subtle));
+}
+
+.card_services_desing{
+    width: 50%;
+}
+/*==================== PORTAFOLIO ====================*/
+
+.portafolio_content{
+    margin: 30px 0px;
+    padding: 20px 30px;
+}
+.portafolio_img{
+    width: 100%;
+    border-radius: .5rem;
+}
+.swiper-button-prev::after, 
+.swiper-button-next::after{
+    content: '' !important;
+}
+.swiper-button-prev{
+    left: 1.5rem !important;
+}
+.swiper-button-next{
+    right: 1.5rem !important;
+}
+.swiper-icon{
+    font-size: 3rem;
+    color: var(--boton-color);
+
+
+}
+.swiper-pagination{
+    bottom: auto !important;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets{
+bottom: -2.5rem !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--boton-color) !important;
+}
+/*==================== SOBRE MI ====================*/
+.SobreMi_container{
+    background-image: 
+    linear-gradient(180deg, 
+        var(--color-canvas-default-transparent), 
+        var(--color-canvas-default)),
+    linear-gradient(70deg, var(--color-accent-subtle) 32%,
+         var(--color-success-subtle));
+
+         padding: 30px 20px;
+
+         border: 1px solid var(--color-border-default);
+}
+.blob{
+    fill:var(--bg-color);
+    width: 100%;
+}
+/*==================== CONTACTO ====================*/
+.form-container{
+    background-image: 
+    linear-gradient(180deg, 
+        var(--color-canvas-default-transparent), 
+        var(--color-canvas-default)),
+    linear-gradient(70deg, var(--color-accent-subtle) 32%,
+         var(--color-success-subtle));
+    border: 1px solid var(--color-border-default);
+    padding: 30px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+input, textarea{
+    border-radius: 5px;
+    padding: 7px;
+    height: 3rem;
+    width: 100%;
+    display: block;
+    background-color: var(--color-primary);
+    border:none;
+    color: var(--color-text);
+}
+
+.social_item a i{
+    color: var(--boton-color);
+    font-size: var(--special-size);
+}
+/*==================== Footer ====================*/
+footer{
+    background-color: var(--color-primary);
+    padding: 30px;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-around;
+}
+.social_content{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+#enlaces_content{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.enlaces_item a{
+    color: var(--color-text);
+    font-size: var(--text-size);
+}
+.enlaces_item a:hover{
+    color: var(--secondary-text_color);
+}
+.copy p{
+    font-size: 1rem;
+    text-align: center;
+}
+/*==================== RESPONSIVE ====================*/
+@media screen and (max-width: 1024px){
+    :root{
+        --h1-size: 3.5rem;
+        --h2-size: 3rem;
+        --h3-size: 2.5rem;
+        --h4-size: 2rem;
+        --text-size:1.15rem;
+        --special-size: 1.25rem;
+    }
+    
+    .seccion-padding{
+        padding: 5rem;
+    }
+
+    .form-container{
+        width: 75%;
+    }
+
+    input, textarea{
+        width: 100%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 780px){
+    :root{
+        --h1-size: 3rem;
+        --h2-size: 2.5rem;
+        --h3-size: 2rem;
+        --h4-size: 1.75rem;
+        --text-size:1rem;
+        --icon-size: 2rem;
+        --special-size: 1.25rem;
+    }
+
+    .seccion-padding{
+    padding: 2rem;
+    }
+    
+    .card_services_desing{
+        width: 100%;
+    }
+
+    .tarjeta_img img{
+        height: auto;
+        width: 100%;
+    }
+
+    .container_boton{
+        text-align: center;
+        margin:20px 5px;
+        width: 100%;
+    }
+
+    .list_content{
+        margin: 40px 0px;
+    }
+
+    .foter_container{
+        display: block;
+      
+    }
+}
+@media screen and (max-width: 478px){
+    :root{
+        --h1-size: 2.75rem;
+        --h2-size: 2.5rem;
+        --h3-size: 2rem;
+        --h4-size: 1.75rem;
+        --text-size:0.85rem;
+        --icon-size: 2rem;
+        --special-size: 1rem;
+    }
+    .container_boton{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .boton{
+        text-align: center;
+        margin:10px 5px;
+        width: 100%;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .footer_container{
+        display: block;
+      
+    }
+}
